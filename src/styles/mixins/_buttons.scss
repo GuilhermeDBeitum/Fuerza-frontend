@@ -22,3 +22,17 @@
   user-select: none;
   vertical-align: middle;
 }
+
+
+
+
+@mixin button {
+  color: #fff;
+  display: flex;
+  font-weight: 500;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+}

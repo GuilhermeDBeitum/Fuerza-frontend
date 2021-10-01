@@ -4,7 +4,7 @@
  *
  */
 .header {
-  background-color: #444;
+  background-color: #fff;
   left: 0;
   position: fixed;
   right: 0;
@@ -18,9 +18,9 @@
   }
 
   &__logo {
-    margin-right: px-to-rem(150px);
-    max-width: px-to-rem(300px);
-    width: 100%;
+    margin-right: px-to-rem(120%);
+    margin-top: 10px;
+    max-width: px-to-rem(150px);
 
     a {
       display: inline-block;

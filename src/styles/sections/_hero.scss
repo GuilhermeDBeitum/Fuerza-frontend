@@ -1,0 +1,46 @@
+/**
+ *
+ * Hero
+ *
+ */
+
+.hero {
+  ul {
+    @include list-unstyled;
+  }
+
+  a {
+    color: inherit;
+    display: inline-block;
+  }
+
+  .swiper {
+    @include background-support();
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 6% 8% 0% -5%;
+    text-align: center;
+
+    
+    &__prev {
+      @include arrow-outline-base(#fff,35px,5px);
+      @include arrow-rotate-left();
+      border-radius: 3px;
+      display: flex;
+      justify-content: flex-end;
+      margin-left: 20px;
+      position: absolute;
+    }
+    
+    &__next {
+      @include arrow-outline-base(#fff,35px,5px);
+      @include arrow-rotate-right();
+      border-radius: 3px;
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 20px;
+      position: absolute;
+    }
+  }
+}

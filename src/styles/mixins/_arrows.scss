@@ -59,7 +59,7 @@
 
 @mixin arrow-outline-right(
   $color: $body-color,
-  $width: 8px,
+  $width: 16px,
   $border-width: 1px
 ) {
   @include arrow-outline-base($color, $width, $border-width);

@@ -1,0 +1,59 @@
+/**
+ *
+ * Card Short Content
+ *
+ */
+.card-short-content {
+  @include padding-x(30px);
+  @include padding-y(30px);
+  display: inline-block;
+  margin: 22px;
+  width: 26.5%;
+ 
+
+  &__figure {
+    display: flex;
+    justify-content: center;
+    width: 100%; 
+  }
+
+  &__inner {
+    color: #000;
+    font-weight: 500;
+    padding-top: 10px;
+
+  }
+
+  &__title {
+    color: #000;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: -1.2px;
+    width: 100%;
+    
+  }
+
+  &__long {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 800;
+    width: 100%;
+  }
+
+  &__footer {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 800;
+    width: 100%;
+  }
+  
+
+  &--flex {
+    color: #fff;
+    display: flex;
+    font-size: 30px;
+    font-weight: 800;
+    margin-left: 25px;
+    width: 96%;
+  }
+}

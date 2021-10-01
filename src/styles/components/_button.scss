@@ -93,3 +93,51 @@
     }
   }
 }
+
+.btn-top {
+  @include button();
+  @include circle(30%);
+  @include gradient(left);
+  border: transparent;
+  font-size: 16px;
+  letter-spacing: 0.9px;
+  margin-top: 10px;
+  padding: 10px;
+  width: 150px;
+  
+}
+
+.btn-footer {
+  @include button();
+  @include circle(30%, #00dec1);
+  background-color: transparent;
+  border: 2px solid #fff;
+  font-size: 16px;
+  letter-spacing: 0.9px;
+  margin-top: 38px;
+  padding: 12px;
+  width: 150px;
+}
+
+.arrow {
+  &__line {
+    @include arrow-color(#fff);
+    border: 1px solid #fff;
+    height: 0;
+    margin-left: 25px;
+    margin-top: 12px;
+    position: relative;
+    width: 30px;
+  }
+
+
+  &__pointer {
+    @include arrow-outline-right();
+    @include arrow-color(#fff);
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 10px;
+    margin-top: -8px;
+    position: absolute;
+  }
+}

@@ -110,7 +110,7 @@ module.exports = {
           },
           'css-loader',
           {
-            loader: 'postcss-loader',
+            loader: 'postcss-loader?url=false',
             options: postcss
           },
           'sass-loader'
@@ -124,7 +124,7 @@ module.exports = {
         test: tests.images,
         use: [
           {
-            loader: 'file-loader',
+            loader: 'file-loader', 
             options: {
               name: '[name].[ext]',
               outputPath: 'images',

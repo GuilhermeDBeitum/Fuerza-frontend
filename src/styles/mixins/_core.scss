@@ -1,3 +1,9 @@
+@mixin gradient($direction) { 
+  background-image: linear-gradient(to $direction, rgb(5, 83, 238), #04fab0);
+  background-repeat: no-repeat;
+}
+
+
 // IE10+ selector. See http://browserhacks.com/
 @mixin ie-gte-10 {
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -98,7 +104,7 @@
 
 // Set image as background cover.
 @mixin cover($url, $position: center center) {
-  background-image: url($url);
+  background: url($url);
   background-position: $position;
   background-repeat: no-repeat;
   background-size: cover;
@@ -144,10 +150,11 @@
   z-index: $zindex;
 }
 
+
 // Render a circle.
 @mixin circle($width, $background-color: '') {
   @include width-height($width);
-  border-radius: 100%;
+  border-radius: 40px;
 
   @if $background-color != '' {
     background-color: $background-color;

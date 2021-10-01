@@ -1,0 +1,44 @@
+/**
+ *
+ * The Content
+ *
+ */
+.the-content {
+  color: #8b8b8b;
+  display: grid;
+  font-size: 14px;
+  font-weight: 700;
+  grid-template-columns: repeat(auto-fill, minmax(70%, 500px));
+  letter-spacing: -0.5px;
+  text-align: center;
+
+  &__left {
+    text-align: left;
+  }
+
+  &__top {
+    color: #fff;
+    display: grid;
+    font-size: 20px;
+    font-weight: bolder;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 700px));
+    justify-content: center;
+    opacity: 0.9;
+    padding: 10px;
+    text-align: justify;
+    text-shadow: 0.01em  #333;
+    width: 100%;
+  }
+
+  &__footer {
+    color: #fff;
+    display: grid;
+    font-size: 18px;
+    font-weight: 500;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 660px));
+    text-align: left;
+    text-align: justify;
+    text-shadow: 0.01em  #333;
+    width: 100%;
+  }
+}

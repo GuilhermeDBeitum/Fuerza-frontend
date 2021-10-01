@@ -56,6 +56,6 @@ module.exports.distScripts = (destPath) => (
 module.exports.tests = {
   scripts: /\.(js|jsx)$/,
   styles: /\.(css|scss|sass)$/,
-  images: /(images).*\.(ico|jpg|jpeg|png|svg|gif)$/,
+  images: /(images).*\.(ico|jpg|jpeg|png|webp|svg|gif)$/,
   fonts: /(fonts).*\.(eot|svg|ttf|woff|woff2)$/,
 };
