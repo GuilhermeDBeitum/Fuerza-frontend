@@ -1,8 +1,22 @@
-@mixin gradient($direction) { 
-  background-image: linear-gradient(to $direction, rgb(5, 83, 238), #04fab0);
-  background-repeat: no-repeat;
+// Add resposive resize header.
+
+@mixin header-responsive {  
+  a {
+    display: inline-block;
+  }
+
+  img {
+    @include img-responsive;
+  }
 }
 
+// Add resposive resize image.
+
+@mixin img-responsive {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
 
 // IE10+ selector. See http://browserhacks.com/
 @mixin ie-gte-10 {

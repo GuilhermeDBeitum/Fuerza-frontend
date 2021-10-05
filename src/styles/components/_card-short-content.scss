@@ -3,6 +3,7 @@
  * Card Short Content
  *
  */
+ 
 .card-short-content {
   @include padding-x(30px);
   @include padding-y(30px);
@@ -10,43 +11,11 @@
   margin: 22px;
   width: 26.5%;
  
-
   &__figure {
     display: flex;
     justify-content: center;
     width: 100%; 
   }
-
-  &__inner {
-    color: #000;
-    font-weight: 500;
-    padding-top: 10px;
-
-  }
-
-  &__title {
-    color: #000;
-    font-size: 18px;
-    font-weight: 800;
-    letter-spacing: -1.2px;
-    width: 100%;
-    
-  }
-
-  &__long {
-    color: #fff;
-    font-size: 40px;
-    font-weight: 800;
-    width: 100%;
-  }
-
-  &__footer {
-    color: #fff;
-    font-size: 30px;
-    font-weight: 800;
-    width: 100%;
-  }
-  
 
   &--flex {
     color: #fff;
@@ -57,3 +26,199 @@
     width: 96%;
   }
 }
+@include desktop-md-down {
+  .card-short-content {
+    &__inner {
+      color: #000;
+      font-weight: 500;
+      padding-top: 10px;
+    }
+  
+    &__title {
+      color: #000;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -1.2px;
+      width: 100%;
+    }
+  
+    &__long {
+      color: #fff;
+      font-size: 40px;
+      font-weight: 800;
+      width: 100%;
+    }
+  
+    &__footer {
+      color: #fff;
+      font-size: 30px;
+      font-weight: 800;
+      width: 100%;
+    }
+  }
+}
+
+@include desktop-down {
+  .card-short-content {
+    &__inner {
+      color: #000;
+      font-weight: 500;
+      padding-top: 10px;
+    }
+  
+    &__title {
+      color: #000;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      width: 110%;
+    }
+  
+    &__long {
+      color: #fff;
+      font-size: 36px;
+      font-weight: 800;
+      width: 100%;
+    }
+  
+    &__footer {
+      color: #fff;
+      font-size: 26px;
+      font-weight: 800;
+      width: 100%;
+    }
+  }
+}
+
+@include tablet-down {
+  .card-short-content {
+    &__inner {
+      color: #000;
+      font-weight: 500;
+      padding-top: 10px;
+    }
+  
+    &__title {
+      color: #000;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: -1.2px;
+      width: 100%;
+    }
+  
+    &__long {
+      color: #fff;
+      font-size: 26px;
+      font-weight: 800;
+      width: 100%;
+    }
+  
+    &__footer {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 800;
+      width: 100%;
+    }
+  }
+}
+
+@include mobile-down {
+  .card-short-content {
+    display: inline;
+
+    &__inner {
+      color: #000;
+      font-weight: 500;
+      padding-top: 25px;
+    }
+  
+    &__title {
+      color: #000;
+      font-size: 44px;
+      font-weight: 800;
+      letter-spacing: -1.2px;
+      text-align: center;
+      width: 100%;
+    }
+  
+    &__long {
+      color: #fff;
+      font-size: 50px;
+      font-weight: 800;
+      width: 90%;
+    }
+  
+    &__footer {
+      color: #fff;
+      font-size: 60px;
+      font-weight: 800;
+      line-height: 2;
+      padding: 80px;
+      width: 100%;
+    }
+
+    &__figure    
+    img {
+      width: 200px;
+    }
+    
+    &__left {
+      text-align: left;
+    }
+  }
+}
+
+@include mobile-small-down {
+  .card-short-content {
+    display: inline;
+
+    &__figure {
+      @include padding-y(20px);
+    }
+
+  }
+
+  .card-short-content {
+    &__inner {
+      color: #000;
+      font-weight: 500;
+      padding-top: 20px;
+    }
+  
+    &__title {
+      color: #000;
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -1.2px;
+      text-align: center;
+      width: 100%;
+    }
+  
+    &__long {
+      color: #fff;
+      font-size: 32px;
+      font-weight: 800;
+      line-height: 1;
+      padding: 10px;
+      width: 100%;
+    }
+  
+    &__footer {
+      color: #fff;
+      font-size: 32px;
+      font-weight: 800;
+      line-height: 2;
+      margin-top: -50px;
+      padding: 30px;
+      text-align: center;
+      width: 102%;
+    }
+
+    &__left {
+      text-align: left;
+    }
+  }
+}
+
+
+

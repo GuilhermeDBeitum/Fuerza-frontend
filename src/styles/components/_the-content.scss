@@ -3,42 +3,159 @@
  * The Content
  *
  */
-.the-content {
-  color: #8b8b8b;
-  display: grid;
-  font-size: 14px;
-  font-weight: 700;
-  grid-template-columns: repeat(auto-fill, minmax(70%, 500px));
-  letter-spacing: -0.5px;
-  text-align: center;
-
-  &__left {
-    text-align: left;
+ 
+@include desktop-md-down {
+  .the-content {
+    @include content-default();
+    font-size: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(70%, 500px));
+    letter-spacing: -0.5px;
+  
+    &__top {
+      @include top-default();
+      font-size: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(30%, 700px));
+      padding: 10px;
+    }
+  
+    &__footer {
+      @include footer-default();
+      font-size: 18px;
+      grid-template-columns: repeat(auto-fill, minmax(30%, 660px));
+    }
+        
+    &__left {
+      text-align: left;
+    }
   }
+}
 
-  &__top {
-    color: #fff;
-    display: grid;
-    font-size: 20px;
-    font-weight: bolder;
-    grid-template-columns: repeat(auto-fill, minmax(30%, 700px));
-    justify-content: center;
-    opacity: 0.9;
-    padding: 10px;
-    text-align: justify;
-    text-shadow: 0.01em  #333;
-    width: 100%;
+@include desktop-down {
+  .the-content {
+    @include content-default();
+    font-size: 12px;
+    grid-template-columns: repeat(auto-fill, minmax(90%, 315px));
+    letter-spacing: -0.5px;
+  
+    &__top {
+      @include top-default();
+      font-size: 16px;
+      grid-template-columns: repeat(auto-fill, minmax(60%, 620px));
+      letter-spacing: 0.2px;
+      padding: 10px;
+    }
+  
+    &__footer {
+      @include footer-default();
+      font-size: 16px;
+      grid-template-columns: repeat(auto-fill, minmax(30%, 660px));
+    }
+    
+    &__left {
+      text-align: left;
+    }
   }
+}
 
-  &__footer {
-    color: #fff;
-    display: grid;
-    font-size: 18px;
-    font-weight: 500;
-    grid-template-columns: repeat(auto-fill, minmax(30%, 660px));
-    text-align: left;
-    text-align: justify;
-    text-shadow: 0.01em  #333;
-    width: 100%;
+@include tablet-down {
+  .the-content {
+    @include content-default();
+    font-size: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(70%, 165px));
+    letter-spacing: -0.9px;
+
+    &__top {
+      @include top-default();
+      font-size: 18px;
+      grid-template-columns: repeat(auto-fill, minmax(30%, 650px));
+      padding: 10px;
+    }
+  
+    &__footer {
+      @include footer-default();
+      font-size: 14px;
+      grid-template-columns: repeat(auto-fill, minmax(30%, 480px));
+    }
+        
+    &__left {
+      text-align: left;
+    }
+  }
+}
+
+@include mobile-down {
+  .the-content {
+    @include content-default();
+    font-size: 32px;
+    grid-template-columns: repeat(auto-fill, minmax(92% , 1px));
+    margin-top: 2px;
+    padding-top: 12px;
+
+    &__top {
+      @include top-default();
+      font-size: 30px;
+      grid-template-columns: repeat(auto-fill, minmax(10%, 600px));
+      padding: 20px;
+    }
+  
+    &__footer {
+      @include footer-default();
+      font-size: 32px;
+      font-weight: 600;
+      grid-template-columns: repeat(auto-fill, minmax(75%, 200px));
+      letter-spacing: -0.6px;
+      line-height: 2;
+      margin-left: 20px;
+      margin-top: -40px;
+      padding-left: 60px;
+      text-align: center;
+    }
+
+    &__left {
+      text-align: left;
+    }
+  }
+}
+
+@include mobile-small-down {
+  .the-content {
+    @include content-default();
+    font-size: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(83%, 300px));
+    justify-content: space-evenly;
+    line-height: 1.6;
+    margin-top: -10px;
+    padding-top: 12px;
+    text-align: center;
+
+
+    &__top {
+      @include top-default();
+      font-size: 16px;
+      font-weight: 500;
+      grid-template-columns: repeat(auto-fill, minmax(98%, 500px));
+      line-height: 1.2;
+      margin-top: -10px;
+      padding: 20px;
+      text-align: center;
+      
+    }
+  
+    &__footer {
+      @include footer-default();
+      font-size: 18px;
+      font-weight: 500;
+      grid-template-columns: repeat(auto-fill, minmax(90%, 350px));
+      letter-spacing: 1px;
+      line-height: 2;
+      margin-top: -40px;
+      padding: 20px;
+      text-align: center;
+    }
+        
+    &__left {
+      justify-content: flex-start;
+      text-align: left;
+    }
   }
 }

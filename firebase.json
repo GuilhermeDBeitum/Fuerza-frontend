@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "fuerzastudio",
+    "public": "www",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

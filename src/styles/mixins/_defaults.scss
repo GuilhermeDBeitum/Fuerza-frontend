@@ -1,0 +1,58 @@
+@mixin background-default {
+  @include position-fill(absolute);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+        
+  overflow: hidden;
+  z-index: 1; 
+}
+
+@mixin top-default {
+  color: #fff;
+  display: grid;
+  font-weight: bolder;
+  justify-content: center;
+  opacity: 0.9;
+  padding: 10px;
+  text-align: justify;
+  text-shadow: 0.01em  #333;
+  width: 100%;
+}
+
+@mixin footer-default {
+  color: #fff;
+  display: grid;
+  font-weight: 500;
+  text-align: left;
+  text-align: justify;
+  text-shadow: 0.01em  #333;
+  width: 100%;
+}
+
+@mixin swiper-default {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+@mixin content-default {
+  color: #8b8b8b;
+  display: grid;
+  font-weight: 700;
+  text-align: center;
+}
+  
+@mixin arrow-default {
+  border-radius: 3px;
+  display: flex;
+  position: absolute;
+} 
+
+
+@mixin pointer-default {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+} 

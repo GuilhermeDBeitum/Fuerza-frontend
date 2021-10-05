@@ -1,3 +1,12 @@
+$screen-xs-max: 767px;
+$screen-sm-min: 768px;
+$screen-sm-max: 991px;
+$screen-md-min: 992px;
+$screen-md-max: 1199px;
+$screen-lg-min: 1200px;
+$screen-lg-max: 1399px;
+$screen-xl-min: 1400px;
+
 /**
  *
  * Mobile First
@@ -35,31 +44,36 @@
  */
 
 @mixin desktop-md-down {
-  @include media-breakpoint-down(xl) {
+  @include media-breakpoint-down(xl);
+  @media screen and (min-width: $screen-xl-min) {
     @content;
-  }
+  } 
 }
 
 @mixin desktop-down {
-  @include media-breakpoint-down(lg) {
+  @include media-breakpoint-down(lg);
+  @media screen and (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
     @content;
   }
 }
 
 @mixin tablet-down {
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(md);
+  @media screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
     @content;
   }
 }
 
 @mixin mobile-down {
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(sm);
+  @media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
     @content;
   }
 }
 
 @mixin mobile-small-down {
-  @include media-breakpoint-down(xs) {
+  @include media-breakpoint-down(xs);
+  @media screen and (max-width: $screen-xs-max) {
     @content;
   }
 }

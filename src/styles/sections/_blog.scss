@@ -3,26 +3,125 @@
  * Blog
  *
  */
+
 .blog {
   background-color: #fafafa;
-
-  &__tag {
-    @include circle(32%, #00dec1);
-    color: #fff;
-    font-size: 12px;
-    padding: 2px;
-    text-align: center;
-    text-transform: uppercase;
-   
-  }
-
-  &__date {
-    color: #a2a2a2;
-    display: flex;
-    font-size: 14px;
-    justify-content: flex-end;
-    margin-top: -20px;
-  
-  }
-
 }
+
+@include desktop-md-down {
+  .blog {
+    &__tag {
+      @include circle(32%, #00dec1);
+      color: #fff;
+      font-size: 12px;
+      padding: 2px;
+      text-align: center;
+      text-transform: uppercase;
+     
+    }
+  
+    &__date {
+      color: #a2a2a2;
+      display: flex;
+      font-size: 14px;
+      justify-content: flex-end;
+      margin-top: -20px;
+    
+    }
+  }
+}
+
+@include desktop-down {
+  .blog {
+    &__tag {
+      @include circle(32%, #00dec1);
+      color: #fff;
+      font-size: 12px;
+      padding: 2px;
+      text-align: center;
+      text-transform: uppercase;
+     
+    }
+  
+    &__date {
+      color: #a2a2a2;
+      display: flex;
+      font-size: 14px;
+      justify-content: flex-end;
+      margin-top: -20px;
+    
+    }
+  }
+}
+
+@include tablet-down {
+  .blog {
+    &__tag {
+      @include circle(30%, #00dec1);
+      color: #fff;
+      font-size: 10px;
+      padding: 1px;
+      text-align: center;
+      text-transform: uppercase;
+     
+    }
+  
+    &__date {
+      color: #a2a2a2;
+      display: flex;
+      font-size: 12px;
+      justify-content: flex-end;
+      margin-top: -18px;
+    }
+  }
+}
+
+@include mobile-down {
+  .blog {
+    padding: 20px;
+
+    &__tag {
+      @include circle(24%, #00dec1);
+      color: #fff;
+      font-size: 22px;
+      margin-top: 50px;
+      padding: 6px;
+      text-align: center;
+      text-transform: uppercase;
+     
+    }
+  
+    &__date {
+      color: #a2a2a2;
+      display: flex;
+      font-size: 26px;
+      justify-content: flex-end;
+      margin-top: -38px;   
+    }
+  }
+}
+
+@include mobile-small-down {
+  .blog {
+    padding: 20px;
+
+    &__tag {
+      @include circle(36%, #00dec1);
+      color: #fff;
+      font-size: 16px;
+      padding: 3px;
+      text-align: center;
+      text-transform: uppercase;
+     
+    }
+  
+    &__date {
+      color: #a2a2a2;
+      display: flex;
+      font-size: 18px;
+      justify-content: flex-end;
+      margin-top: -28px;   
+    }
+  }
+}
+

@@ -18,3 +18,56 @@
     text-decoration: none;
   }
 }
+
+@include mobile-down {
+  .menu-main {
+    @include gradient(bottom);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 110vh;
+    left: 850px;
+    margin-top: 80vh;
+    opacity: 0.9;
+    position: relative;
+    transition: all $trs linear;
+    width: 550px;
+
+    > li + li {
+      margin-left: px-to-rem(32px);
+    }
+
+    a {
+      color: color('#fff');
+      line-height: (18/16);
+      text-decoration: none;
+    }
+  }
+}
+
+@include mobile-small-down {
+  .menu-main {
+    @include gradient(bottom);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 110vh;
+    left: 410px;
+    margin-top: 80vh;
+    opacity: 0.9;
+    position: relative;
+    transition: all $trs linear;
+    width: 270px;
+
+    > li + li {
+      margin-left: px-to-rem(32px);
+    }
+
+    a {
+      color: color('#fff');
+      line-height: (18/16);
+      text-decoration: none;
+    }
+  }
+}
+

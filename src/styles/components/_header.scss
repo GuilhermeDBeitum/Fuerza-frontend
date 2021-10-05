@@ -3,6 +3,7 @@
  * Header
  *
  */
+
 .header {
   background-color: #fff;
   left: 0;
@@ -17,22 +18,83 @@
     height: $header-height-desktop;
   }
 
-  &__logo {
-    margin-right: px-to-rem(120%);
-    margin-top: 10px;
-    max-width: px-to-rem(150px);
-
-    a {
-      display: inline-block;
-    }
-
-    img {
-      @extend %img-responsive;
-    }
-  }
-
+    
   &__actions {
     margin-left: auto;
+  }
+}
+
+@include desktop-md-down {
+  .header {
+    @include header-responsive();
+
+    &__logo {
+      margin-right: px-to-rem(120%);
+      margin-top: 10px;
+      max-width: px-to-rem(150px);
+    }
+  }
+} 
+
+@include desktop-down {
+  .header {
+    @include header-responsive();
+
+    &__logo {
+      margin-right: px-to-rem(95%);
+      margin-top: 10px;
+      max-width: px-to-rem(120px);
+    }
+  }
+}
+
+@include tablet-down {
+  .header {
+    @include header-responsive();
+
+    &__logo {
+      margin-right: px-to-rem(100%);
+      margin-top: 10px;
+      max-width: px-to-rem(120px);
+    }
+  }
+}
+
+@include mobile-down {
+  .header {
+    @include header-responsive();
+       
+    &__body {
+      align-items: center;
+      display: flex;
+      height: 150px;
+    }
+
+    &__logo {
+      margin-left: 20px;
+      margin-right: px-to-rem(-200%);
+      margin-top: 20px;
+      max-width: px-to-rem(250px);
+    }
+  }
+}
+
+@include mobile-small-down {
+  .header {
+    @include header-responsive();
+
+    &__body {
+      align-items: center;
+      display: flex;
+      height: 80px;
+    }
+
+    &__logo {
+      margin-left: 10px;
+      margin-right: px-to-rem(-100%);
+      margin-top: 20px;
+      max-width: px-to-rem(320px);
+    }
   }
 }
 

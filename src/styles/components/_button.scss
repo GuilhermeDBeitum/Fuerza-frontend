@@ -21,11 +21,11 @@
  *
  */
 
+
 .btn-nav {
   appearance: none;
   background-color: transparent;
   border: 0;
-  color: $white;
   display: none;
   font-size: 0;
   line-height: 0;
@@ -45,15 +45,16 @@
   span::after,
   &::after,
   &::before {
-    background: currentColor;
+    @include gradient(left);
     content: '';
     height: px-to-rem(2px);
     left: 0;
+    margin-left: -30px;
     position: absolute;
     transition-duration: $trs;
-    transition-property: top, transform, visibility, opacity;
     transition-timing-function: ease-in-out;
-    width: 100%;
+    width: 120%;
+
   }
 
   span::after {
@@ -72,72 +73,364 @@
     span::after,
     &::after,
     &::before {
-      background: currentColor;
+      @include gradient(left);
+      animation: left-animation $trs;
+      margin-left: -300px;
+      transform: translateX(-300px);
+    }
+
+
+
+    @keyframes left-animation {  
+      0% {   margin-left: 0%; }
+      
+      100% {   margin-left: -300px; }
     }
 
     span::after {
       top: px-to-rem(6px);
       transform: rotate(45deg);
+      width: 20px;
     }
 
     &::before {
       top: px-to-rem(6px);
       transform: rotate(-45deg);
+      width: 20px;
     }
 
+
     &::after {
-      opacity: 0;
+      margin-left: 2px;
       top: px-to-rem(6px);
-      transform: translateX(100%);
       visibility: hidden;
     }
   }
 }
 
-.btn-top {
-  @include button();
-  @include circle(30%);
-  @include gradient(left);
-  border: transparent;
-  font-size: 16px;
-  letter-spacing: 0.9px;
-  margin-top: 10px;
-  padding: 10px;
-  width: 150px;
+
+
+
+@include desktop-md-down {
+  .btn-top {
+    @include button();
+    @include circle(30%, #00dec1);
+    @include gradient(left);
+    border: transparent;
+    font-size: 16px;
+    letter-spacing: 0.9px;
+    margin-top: 10px;
+    padding: 10px;
+    width: 150px;
+    
+  }
   
+  .btn-footer {
+    @include button();
+    @include circle(30%, #00dec1);
+    background-color: transparent;
+    border: 2px solid #fff;
+    font-size: 16px;
+    letter-spacing: 0.9px;
+    margin-top: 38px;
+    padding: 12px;
+    width: 150px;
+  }
+  
+  .arrow {
+    &__line {
+      @include arrow-color(#fff);
+      border: 1px solid #fff;
+      height: 1px;
+      margin-left: 25px;
+      margin-top: 10px;
+      position: relative;
+      width: 25px;
+    }
+  
+    &__pointer {
+      @include arrow-outline-right();
+      @include arrow-color(#fff);
+      @include pointer-default();
+      margin-left: 20%;
+      margin-top: -8px;
+    }
+  }  
 }
 
-.btn-footer {
-  @include button();
-  @include circle(30%, #00dec1);
-  background-color: transparent;
-  border: 2px solid #fff;
-  font-size: 16px;
-  letter-spacing: 0.9px;
-  margin-top: 38px;
-  padding: 12px;
-  width: 150px;
+@include desktop-down {
+  .btn-top {
+    @include button();
+    @include circle(30%, #00dec1);
+    @include gradient(left);
+    border: transparent;
+    font-size: 16px;
+    letter-spacing: 0.9px;
+    margin-top: 10px;
+    padding: 10px;
+    width: 136px;
+    
+  }
+  
+  .btn-footer {
+    @include button();
+    @include circle(30%, #00dec1);
+    background-color: transparent;
+    border: 2px solid #fff;
+    font-size: 16px;
+    letter-spacing: 0.9px;
+    margin-top: 38px;
+    padding: 12px;
+    width: 136px;
+  }
+  
+  .arrow {
+    &__line {
+      @include arrow-color(#fff);
+      border: 1px solid #fff;
+      height: 1px;
+      margin-left: 15px;
+      margin-top: 10px;
+      position: relative;
+      width: 26px;
+    }
+  
+    &__pointer {
+      @include arrow-outline-right();
+      @include arrow-color(#fff);
+      @include pointer-default();
+      margin-left: 25%;
+      margin-top: -8px;
+
+    }
+  }  
 }
 
-.arrow {
-  &__line {
-    @include arrow-color(#fff);
-    border: 1px solid #fff;
-    height: 0;
-    margin-left: 25px;
-    margin-top: 12px;
-    position: relative;
-    width: 30px;
+@include tablet-down {
+  .btn-top {
+    @include button();
+    @include circle(30%);
+    @include gradient(left);
+    border: transparent;
+    font-size: 12px;
+    letter-spacing: 0.9px;
+    margin-top: 10px;
+    padding: 10px;
+    width: 130px;
+    
+  }
+  
+  .btn-footer {
+    @include button();
+    @include circle(30%, #00dec1);
+    background-color: transparent;
+    border: 2px solid #fff;
+    font-size: 12px;
+    letter-spacing: 0.9px;
+    margin-top: 38px;
+    padding: 12px;
+    width: 130px;
+  }
+  
+  .arrow {
+    &__line {
+      @include arrow-color(#fff);
+      border: 1px solid #fff;
+      height: 1px;
+      margin-left: 25px;
+      margin-top: 8px;
+      position: relative;
+      width: 20px;
+    }
+  
+    &__pointer {
+      @include arrow-outline-right();
+      @include arrow-color(#fff);
+      @include pointer-default();
+      margin-left: 1px;
+      margin-top: -8px;
+    }
+  }  
+}
+
+@include mobile-down {
+  .btn-nav {
+    display: block;
+    margin-left: 30%;
+
+    span::after,
+    &::after,
+    &::before {
+      @include gradient(left);
+      content: '';
+      height: px-to-rem(2px);
+      margin-left: -30px;
+      position: absolute;
+      transition-duration: $trs;
+      transition-timing-function: ease-in-out;
+      width: 250%;
+  
+    }
+  
+    span::after {
+      height: 5px;
+      margin-top: -5px;
+      top: 0;
+    }
+  
+    &::after {
+      height: 5px;
+      margin-top: 5px;
+      top: px-to-rem(6px);
+    }
+  
+    &::before {
+      height: 5px;
+      margin-top: 15px;
+      top: px-to-rem(12px);
+    }
+  
+    &.is-active {
+      span::after,
+      &::after,
+      &::before {
+        @include gradient(left);
+        animation: left-animation $trs;
+        margin-left: -600px;
+        transform: translateX(-600px);
+      }
+  
+
+  
+      @keyframes left-animation {  
+        0% {   margin-left: 0%; }
+        
+        100% {   margin-left: -600px; }
+      }
+  
+      
+      span::after {
+        height: 5px;
+        left: px-to-rem(6px);
+        top: px-to-rem(26px);
+        transform: rotate(45deg);
+        width: 50px;
+ 
+      }
+  
+      &::before {
+        height: 5px;
+        left: px-to-rem(6px);
+        top: px-to-rem(6px);
+        transform: rotate(-45deg);
+        width: 50px;
+      }
+    }
   }
 
-
-  &__pointer {
-    @include arrow-outline-right();
-    @include arrow-color(#fff);
-    display: flex;
-    justify-content: flex-end;
-    margin-left: 10px;
-    margin-top: -8px;
-    position: absolute;
+  .btn-top {
+    @include button();
+    @include circle(10%, #00dec1);
+    @include gradient(left);
+    border: transparent;
+    font-size: 28px;
+    letter-spacing: 0.9px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 24px;
+    width: 250px;
+    
   }
+  
+  .btn-footer {
+    @include button();
+    @include circle(10%, #00dec1);
+    background-color: transparent;
+    border: 2px solid #fff;
+    font-size: 28px;
+    letter-spacing: 0.9px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 22px;
+    width: 250px;
+  }
+  
+  .arrow {
+    &__line {
+      @include arrow-color(#fff);
+      border: 1px solid #fff;
+      height: 1px;
+      margin-left: 40px;
+      margin-top: 20px;
+      position: relative;
+      width: 30px;
+    }
+  
+    &__pointer {
+      @include arrow-outline-right();
+      @include arrow-color(#fff);
+      @include pointer-default();
+      margin-left: 12px;
+      margin-top: -8px;
+    }
+  }  
+}
+
+
+
+@include mobile-small-down {
+  .btn-nav {
+    display: block;
+    margin-left: 20%;
+    margin-top: 10px;
+    width: 50px;
+  }
+  
+
+  .btn-top {
+    @include button();
+    @include circle(10%, #00dec1);
+    @include gradient(left);
+    border: transparent;
+    font-size: 18px;
+    letter-spacing: 0.6px;
+    margin-bottom: 10px;
+    margin-top: 16px;
+    padding: 18px;
+    width: 140px;
+    
+  }
+  
+  .btn-footer {
+    @include button();
+    @include circle(9.5%, #00dec1);
+    background-color: transparent;
+    border: 2px solid #fff;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    margin-bottom: 12px;
+    margin-top: 16px;
+    padding: 10px;
+    width: 140px;
+  }
+  
+  .arrow {
+    &__line {
+      @include arrow-color(#fff);
+      border: 1px solid #fff;
+      height: 1px;
+      margin-left: 8px;
+      margin-top: 9px;
+      position: relative;
+      width: 22px;
+    }
+  
+    &__pointer {
+      @include arrow-outline-right();
+      @include arrow-color(#fff);
+      @include pointer-default();
+      margin-left: 2px;
+      margin-top: -8.2px;
+    }
+  }  
 }

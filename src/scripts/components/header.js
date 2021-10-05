@@ -13,7 +13,7 @@ export default class Header {
     this.nodes = {
       root: document.querySelector('html'),
       header: $header,
-      menu: $header.querySelector('[data-element="menu"]'),
+      menu: $header.querySelector('[data-element="menu-main"]'),
       toggleMenu: $header.querySelector('[data-element="toggle-menu"]'),
     };
   }

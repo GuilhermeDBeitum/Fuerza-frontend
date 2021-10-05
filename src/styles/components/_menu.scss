@@ -3,10 +3,13 @@
  * Menu
  *
  */
+ 
 .menu {
   &,
   ul {
     @include list-unstyled;
+    margin: 0;
+    padding: 0;
   }
 
   a {
@@ -17,18 +20,90 @@
       text-decoration: none;
     }
   }
+}
 
-  ul {
-    margin: 0;
-    padding: 0;
-  }
-
-
-  &-item {
-    color: #a2a2a2;
-    font-size: 14px;
-    font-weight: 600;
-    margin: 30px 40px 30px 48px;
-    padding: 15px;
+@include desktop-md-down {
+  .menu {
+    &-item {
+      color: #a2a2a2;
+      font-size: 14px;
+      font-weight: 600;
+      margin: 11px 45px 30px 48px;
+      padding: 20px;
+    }
   }
 }
+
+@include desktop-down {
+  .menu {
+    &-item {
+      color: #a2a2a2;
+      font-size: 14px;
+      font-weight: 600;
+      margin: 11px 30px 30px 48px;
+      padding: 18px;
+    }
+  }
+}
+
+@include tablet-down {
+  .menu {
+    &-item {
+      color: #a2a2a2;
+      font-size: 14px;
+      font-weight: 600;
+      margin: 1px 10px 30px 48px;
+      padding: 10px;
+    }
+  }
+}
+
+@include mobile-down {
+  .menu {
+    &.header-menu-active {     
+      margin-left: 100px;
+      transform: translateX(-500px);
+      
+    }
+
+
+    &-item {
+      color: #fff;
+      font-size: 28px;
+      font-weight: 500;
+      height: 10px;
+      margin: 100px 11px -80px 10px;
+      padding: 50px;
+      text-align: center;
+      text-indent: -30px;
+      width: 500px;
+    }
+  }
+}
+
+@include mobile-small-down {
+  .menu {
+    &.header-menu-active {     
+      margin-left: 100px;
+      transform: translateX(-300px);
+    }
+
+    &-item {
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      height: 10px;
+      margin: 100px 11px -80px 31px;
+      padding: 20px;
+      text-align: center;
+      text-indent: -60px;
+      width: 300px;
+    }
+  }
+}
+
+
+
+
+
+

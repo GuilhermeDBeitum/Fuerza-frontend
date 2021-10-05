@@ -9,3 +9,10 @@
   background-repeat: $repeat;
   background-size: $size;
 }
+
+// Add gradient colors.
+
+@mixin gradient($direction) { 
+  background-image: linear-gradient(to $direction, rgb(5, 83, 238), #04fab0);
+  background-repeat: no-repeat;
+}
